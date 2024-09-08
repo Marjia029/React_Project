@@ -1,31 +1,29 @@
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+} from 'react-router-dom';
+
 import React from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import HomeCards from './components/HomeCards'
 import JobListings from './components/JobListings'
 import ViewAllJobs from './components/ViewAllJobs'
-function App() {
-  return (
-    <>
-      <Navbar />
-      
 
-      {/* <!-- Hero --> */}
-
-      <Hero />
-      
-
-      {/* <!-- Developers and Employers --> */}
-      <HomeCards />
-
-      {/* <!-- Browse Jobs --> */}
-      <JobListings />
-      <ViewAllJobs />
-      
-     
-
-    </>
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route index element = {<h1>My App</h1>}/>
   )
-}
+);
 
-export default App
+
+const App = () => {
+  return (
+    <RouterProvider router={router} />
+      
+  )
+};
+
+export default App;
