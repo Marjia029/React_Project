@@ -5,6 +5,9 @@ import HomeCards from '../components/HomeCards'
 import JobListings from '../components/JobListings'
 import ViewAllJobs from '../components/ViewAllJobs'
 import Navbar from '../components/Navbar'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const MainLayout = () => {
@@ -12,6 +15,7 @@ const MainLayout = () => {
     <>
     <Navbar/>
     <Outlet/>
+    <ToastContainer />
     
     </>
   )
